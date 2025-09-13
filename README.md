@@ -176,18 +176,19 @@ The Scalable User Data Platform is a complete database solution that demonstrate
 
 ## Data Verification
 
-sql
--- Verify data integrity
-SELECT 
-    u.UserID,
-    u.Username,
-    p.ProfileID,
-    a.AuditID,
-    a.CreationTime
-FROM Users u
-LEFT JOIN UserProfiles p ON u.UserID = p.UserID
-LEFT JOIN UserAudit a ON u.UserID = a.UserID
-ORDER BY u.UserID;
+     sql
+     -- Verify data integrity
+     
+     SELECT 
+     u.UserID,
+     u.Username,
+     p.ProfileID,
+     a.AuditID,
+     a.CreationTime
+     FROM Users u
+     LEFT JOIN UserProfiles p ON u.UserID = p.UserID
+     LEFT JOIN UserAudit a ON u.UserID = a.UserID
+     ORDER BY u.UserID;
 
 
 # 🧹 Maintenance
@@ -200,12 +201,13 @@ ORDER BY u.UserID;
 
 
 ## Backup
-bash
-// Export database
-mysqldump -u root -p UserManagementDB > backup.sql
 
-// Import database
-mysql -u root -p UserManagementDB < backup.sql
+    bash
+    // Export database
+    mysqldump -u root -p UserManagementDB > backup.sql
+
+   // Import database
+   mysql -u root -p UserManagementDB < backup.sql
 
 
 # 🛠️ Customization
@@ -213,24 +215,24 @@ mysql -u root -p UserManagementDB < backup.sql
 
 Edit tables/create_tables.sql to add new columns:
 
-sql
-ALTER TABLE Users 
-ADD COLUMN LastLogin DATETIME NULL AFTER DateCreated;
+      sql
+      ALTER TABLE Users 
+      ADD COLUMN LastLogin DATETIME NULL AFTER DateCreated;
 
 
 ## Extending Audit System
 
 Modify triggers/create_triggers.sql to track additional events:
 
-sql
--- Example: Add update trigger
-CREATE TRIGGER AfterUserUpdate
-AFTER UPDATE ON Users
-FOR EACH ROW
-BEGIN
-    INSERT INTO UserAudit (UserID, CreationTime, ActionPerformed)
-    VALUES (NEW.UserID, NOW(), 'UPDATE');
-END;
+     sql
+     -- Example: Add update trigger
+     CREATE TRIGGER AfterUserUpdate
+     AFTER UPDATE ON Users
+     FOR EACH ROW
+     BEGIN
+        INSERT INTO UserAudit (UserID, CreationTime, ActionPerformed)
+         VALUES (NEW.UserID, NOW(), 'UPDATE');
+     END;
 
 
 # 📈 Performance Considerations
@@ -239,10 +241,10 @@ END;
 
 -->Consider adding indexes on frequently queried columns:
 
-sql
-CREATE INDEX idx_users_email ON Users(Email);
-CREATE INDEX idx_audit_userid ON UserAudit(UserID);
-CREATE INDEX idx_audit_creationtime ON UserAudit(CreationTime);
+       sql
+       CREATE INDEX idx_users_email ON Users(Email);
+       CREATE INDEX idx_audit_userid ON UserAudit(UserID);
+       CREATE INDEX idx_audit_creationtime ON UserAudit(CreationTime);
 
 
 # 🤝 Contributing
@@ -265,11 +267,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support or questions:
 
-    1. Check the MySQL documentation
+ 1. Check the MySQL documentation
 
-    2. Review script comments for detailed explanations
+ 2. Review script comments for detailed explanations
 
-    3. Open an issue in the GitHub repository
+ 3. Open an issue in the GitHub repository
 
 # 🔄 Version History
 
