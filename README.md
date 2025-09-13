@@ -138,13 +138,13 @@ The Scalable User Data Platform is a complete database solution that demonstrate
 
 1. AfterUserInsert: Automatically creates user profiles when new users are added
 
-2.RecordCreationTime: Maintains audit trail of all user creations
+2. RecordCreationTime: Maintains audit trail of all user creations
 
 ## Testing Procedure
 
 1. GenerateTestUsers(): Creates configurable test users with custom domains
 
-2.Comprehensive logging of all operations
+2. Comprehensive logging of all operations
 
 3. Parameterized input for flexible testing
 
@@ -160,18 +160,18 @@ The Scalable User Data Platform is a complete database solution that demonstrate
 
 ## Basic Operations
 
-sql
--- Create test users
-CALL GenerateTestUsers(10, 'company.com');
+     sql
+     -- Create test users
+     CALL GenerateTestUsers(10, 'company.com');
 
--- View all users
-SELECT * FROM Users;
+     -- View all users
+     SELECT * FROM Users;
 
--- Check audit trail
-SELECT * FROM UserAudit;
+     -- Check audit trail
+     SELECT * FROM UserAudit;
 
--- Review system logs
-SELECT * FROM _TriggerLogs ORDER BY CreatedAt DESC;
+     -- Review system logs
+     SELECT * FROM _TriggerLogs ORDER BY CreatedAt DESC;
 
 
 ## Data Verification
