@@ -123,16 +123,13 @@ Scalable-User-Data-Platform/
 # Command Line Execution
 
 
-
-mysql -u root -p < database/create_database.sql
-mysql -u root -p < schema/create_schema.sql
-mysql -u root -p < tables/create_tables.sql
-mysql -u root -p < triggers/create_triggers.sql
-mysql -u root -p < test/test_data_procedure.sql
-
-
-mysql -u root -p -e "CALL GenerateTestUsers(50, 'test.com');"
-mysql -u root -p < test/result.sql
+    mysql -u root -p < database/create_database.sql
+    mysql -u root -p < schema/create_schema.sql
+    mysql -u root -p < tables/create_tables.sql
+    mysql -u root -p < triggers/create_triggers.sql
+    mysql -u root -p < test/test_data_procedure.sql
+    mysql -u root -p -e "CALL GenerateTestUsers(50, 'test.com');"
+    mysql -u root -p < test/result.sql
 
 
 # 🔧 Key Components
