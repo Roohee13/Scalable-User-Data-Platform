@@ -44,23 +44,23 @@ The Scalable User Data Platform is a complete database solution that demonstrate
 Scalable-User-Data-Platform/
 │
 ├── database/
-│   └── create_database.sql          # Database creation script
+│   └── create_database.sql           Database creation script
 │
 ├── schema/
-│   └── create_schema.sql            # Schema setup script
+│   └── create_schema.sql             Schema setup script
 │
 ├── tables/
-│   └── create_tables.sql            # Table creation with constraints
+│   └── create_tables.sql             Table creation with constraints
 │
 ├── triggers/
-│   └── create_triggers.sql          # Automated trigger system
+│   └── create_triggers.sql           Automated trigger system
 │
 ├── test/
-│   ├── test_data_procedure.sql      # Test data generation
-│   └── result.sql                   # Verification queries
+│   ├── test_data_procedure.sql       Test data generation
+│   └── result.sql                    Verification queries
 │
-├── cleanup.sql                      # Database cleanup script
-└── README.md                        # This file
+├── cleanup.sql                       Database cleanup script
+└── README.md                         This file
 
 
 # 🚀 Installation & Setup
@@ -123,15 +123,14 @@ Scalable-User-Data-Platform/
 # Command Line Execution
 
 
-bash
-// Execute all scripts in sequence
+
 mysql -u root -p < database/create_database.sql
 mysql -u root -p < schema/create_schema.sql
 mysql -u root -p < tables/create_tables.sql
 mysql -u root -p < triggers/create_triggers.sql
 mysql -u root -p < test/test_data_procedure.sql
 
-// Generate test data and view results
+
 mysql -u root -p -e "CALL GenerateTestUsers(50, 'test.com');"
 mysql -u root -p < test/result.sql
 
