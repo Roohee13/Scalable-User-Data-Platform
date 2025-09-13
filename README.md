@@ -41,26 +41,26 @@ The Scalable User Data Platform is a complete database solution that demonstrate
 
 # 📁 File Structure
 
-Scalable-User-Data-Platform/
-│
-├── database/
-│   └── create_database.sql           Database creation script
-│
-├── schema/
-│   └── create_schema.sql             Schema setup script
-│
-├── tables/
-│   └── create_tables.sql             Table creation with constraints
-│
-├── triggers/
-│   └── create_triggers.sql           Automated trigger system
-│
-├── test/
-│   ├── test_data_procedure.sql       Test data generation
-│   └── result.sql                    Verification queries
-│
-├── cleanup.sql                       Database cleanup script
-└── README.md                         This file
+     Scalable-User-Data-Platform/
+     │
+     ├── database/
+     │   └── create_database.sql           Database creation script
+     │
+     ├── schema/
+     │   └── create_schema.sql             Schema setup script
+     │
+     ├── tables/
+     │   └── create_tables.sql             Table creation with constraints
+     │
+     ├── triggers/
+     │   └── create_triggers.sql           Automated trigger system
+     │
+     ├── test/
+     │   ├── test_data_procedure.sql       Test data generation
+     │   └── result.sql                    Verification queries
+     │
+     ├── cleanup.sql                       Database cleanup script
+     └── README.md                         This file
 
 
 # 🚀 Installation & Setup
