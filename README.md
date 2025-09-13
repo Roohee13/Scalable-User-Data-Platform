@@ -198,15 +198,9 @@ ORDER BY u.UserID;
 
 ## Cleanup
 
-          sql
-
-          -- Complete database reset
-
-          SOURCE cleanup.sql;
-
-          -- Or execute directly
-
-          DROP DATABASE IF EXISTS UserManagementDB;
+     sql
+     SOURCE cleanup.sql;
+     DROP DATABASE IF EXISTS UserManagementDB;
 
 
 ## Backup
